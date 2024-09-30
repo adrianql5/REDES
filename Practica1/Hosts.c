@@ -16,13 +16,13 @@ int main(int argc, char const *argv[]){
     //Direccion IP original en binario
     printf("Dirección IP en formato hexadecimal: %X\n", miip.s_addr);
 
-    //Convierto la direccion IP binaria a formato de host
-    uint32_t direccion_host = ntohl(miip.s_addr);
-    printf("Dirección IP en formato de host: %X\n", direccion_host);
-
     //Convierto la IP de formato de host a red
-    uint32_t direccion_red = htonl(direccion_host);
+    uint32_t direccion_red = htonl(miip.s_addr);
     printf("Dirección IP en formato de red: %X\n", direccion_red);
+
+    //Convierto la direccion IP binaria a formato de host
+    uint32_t direccion_host = ntohl(direccion_red);
+    printf("Dirección IP en formato de host: %X\n", direccion_host);
 
     return 0;
 }

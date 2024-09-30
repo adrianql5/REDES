@@ -3,6 +3,10 @@
 #include <netinet/in.h> //Librería para las funciones de red
 #include <inttypes.h>
 
+
+
+
+
 struct in_addr miip; //Struct tipo direccion IP en formato binario ej 0xC8806EC1
 
 int main( int argc, char ** argv){
