@@ -21,6 +21,8 @@ int main(){
     puerto=0x175C;//5980
     puertoared=htons(puerto);
 
+    tamañoSocket=sizeof(direccionSocket);
+
     socketServidor=socket(AF_INET,SOCK_STREAM, 0);
     if (socketServidor < 0){
         perror("No se pudo crear el socket de Servidor");
@@ -45,6 +47,8 @@ int main(){
         perror("Error al intentar aceptar");
         exit(EXIT_FAILURE);
     }
+
+    
     
 
 
